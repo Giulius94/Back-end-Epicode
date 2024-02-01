@@ -6,7 +6,7 @@
         $file_name = $_FILES['fotoFile']['name'];
         $senza_spazi = str_replace(' ', '', $file_name);
         
-        $target_dir = 'uploads/';
+        $target_dir = './uploads/';
         $tutta_dir = $target_dir . $senza_spazi;
         // print $tutta_dir;
         if(is_uploaded_file($_FILES['fotoFile']["tmp_name"]) && $_FILES['fotoFile']["error"] === UPLOAD_ERR_OK) {
