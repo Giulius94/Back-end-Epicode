@@ -27,6 +27,10 @@
   </div>
 </form>
 
+<div class="col-12 mt-5">
+    <button type="submit" onclick="window.location.href='index_csv.php'" class="btn btn-primary">Esporta dati in csv</button>
+  </div>
+
 <?php if ($_GET['add'] === 'success') {
     print '<h3>Dati inviati con successo</h3>';
 } ?>

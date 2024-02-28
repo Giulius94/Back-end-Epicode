@@ -26,4 +26,12 @@
     )';
     if(!$mysqli->query($sqltable)) { die($mysqli->connect_error); }
 
+    $sqltable2 = 'CREATE TABLE IF NOT EXISTS userscsv ( 
+        id INT NOT NULL PRIMARY KEY,
+        firstname VARCHAR(255) NOT NULL, 
+        lastname VARCHAR(255) NOT NULL, 
+        city VARCHAR(255) NOT NULL
+    )';
+    if(!$mysqli->query($sqltable2)) { die($mysqli->connect_error); }
+
 ?>
