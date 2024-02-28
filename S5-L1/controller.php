@@ -1,5 +1,4 @@
 <?php
-// processaDati.php
 require_once 'config.php'; // Assicurati che config.php contenga le informazioni per connettersi al DB
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Errore nell'inserimento: " . $mysqli->error;
     } else {
         echo 'Record aggiunto con successo!!!';
+        exit('index.php');
     }
 }
 ?>
