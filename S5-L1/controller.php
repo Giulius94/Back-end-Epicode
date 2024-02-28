@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php'; // Assicurati che config.php contenga le informazioni per connettersi al DB
+require_once 'config.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prendi i dati dal form
@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Errore nell'inserimento: " . $mysqli->error;
     } else {
         echo 'Record aggiunto con successo!!!';
-        exit('index.php');
+        header("Location: index.php?add=success", true, 301);
+        exit;
     }
 }
 ?>

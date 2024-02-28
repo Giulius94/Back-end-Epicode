@@ -27,6 +27,10 @@
   </div>
 </form>
 
+<?php if ($_GET['add'] === 'success') {
+    print '<h3>Dati inviati con successo</h3>';
+} ?>
+
 
 
 
