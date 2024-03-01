@@ -11,7 +11,7 @@ if(!file_exists($dir)) {
 
 $utenti = [];
 
-$sql = 'SELECT * FROM users;';
+$sql = "SELECT * FROM users;";
 $datiUtenti =  $mysqli ->query($sql);
 /* var_dump($datiUtenti); */
 foreach($datiUtenti as $datiUtenti) {
@@ -30,7 +30,7 @@ if($resource) {
 $resource = fopen($dir.$file, 'r');
 while($data = fgetcsv($resource)) {
   var_dump($data);
- /*  $querySql = "SELECT * FROM userscsv WHERE id = $data "; */
+ /* $querySql = "SELECT * FROM userscsv WHERE id = $data ";  */
   $sql = "INSERT INTO userscsv (id, firstname, lastname, city) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]')";
   $mysqli ->query($sql);
 
