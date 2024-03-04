@@ -11,9 +11,8 @@ abstract class MaterialeBibliotecario implements Prestito
     protected static $contatoreMateriali = 0;
 
     public static function getCounter()
-    { // STATIC metodo di classe
-        // return $this->count; // leggo una proprietà di istanza
-        return self::$contatoreMateriali; // leggo una proprietà di classe static
+    { 
+        return self::$contatoreMateriali;
     }
 }
 
